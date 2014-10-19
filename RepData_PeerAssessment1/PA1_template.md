@@ -67,6 +67,7 @@ sum(is.na(data$steps)==TRUE)
 
 ```r
 # Create a new dataset that is equal to the original dataset but with the missing data filled in.
+# The strategy for filling in all of the missing values in the dataset is to replace the missing values with the mean for that 5-minute interval.
 repdata<-data
 for(i in 1:length(repdata$steps)) {
     if(is.na(repdata$steps[i])) {
